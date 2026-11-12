@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | ETracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-amber-50 min-h-screen text-gray-900">
+    <header class="bg-green-700 text-white px-6 py-4 flex justify-between items-center shadow-md">
+        <div class="text-2xl font-bold">
+            <span class="bg-white text-green-700 rounded-xl px-2 py-1 mr-1">E</span>
+            ETracker
+        </div>
+        <span class="text-sm text-green-100">Monitor your money from entry to spending</span>
+    </header>
+    <div class="flex">
+        <aside class="w-60 min-h-screen bg-gray-100 font-semibold p-5 shrink-0">
+            <div class="flex justify-between items-center mb-8">
+                <div class="text-xl font-bold text-green-700">ETracker</div>
+                <button type="button" aria-label="Toggle navigation" class="flex flex-col gap-1.5">
+                    <span class="w-6 h-0.5 bg-green-900"></span>
+                    <span class="w-6 h-0.5 bg-green-900"></span>
+                    <span class="w-6 h-0.5 bg-green-900"></span>
+                </button>
+            </div>
+            <ul class="space-y-3">
+                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
+                    <a href="Dashboard.html">Dashboard</a>
+                </li>
+                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
+                    <a href="Accounts.html">Accounts</a>
+                </li>
+                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
+                    <a href="Imports.html">Imports</a>
+                </li>
+                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
+                    <a href="analytics.html">Analytics</a>
+                </li>
+                <li class="px-4 py-3 rounded-lg cursor-pointer bg-green-700 text-white">
+                    <a href="settings.html" aria-current="page">Settings</a>
+                </li>
+            </ul>
+        </aside>
+        <main class="flex-1 min-w-0 p-6">
+            <div class="mb-6">
+                <h1 class="text-2xl font-bold text-green-700">Settings</h1>
+                <p class="text-gray-600 mt-1">Personalize how ETracker looks and how long your data is kept.</p>
+            </div>
+            <section class="bg-white rounded-xl p-5 shadow mb-6" aria-labelledby="appearance-heading">
+                <div class="mb-5">
+                    <h2 id="appearance-heading" class="text-lg font-bold">Appearance</h2>
+                    <p class="text-sm text-gray-500 mt-1">Choose the theme you prefer when viewing your finances.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <label class="flex items-center gap-4 p-4 border-2 border-green-700 rounded-xl cursor-pointer bg-green-50">
+                        <input type="radio" name="theme" value="light" checked class="accent-green-700">
+                        <span class="flex-1">
+                            <span class="block font-semibold">Light theme</span>
+                            <span class="block text-sm text-gray-500">A bright, easy-to-read workspace.</span>
+                        </span>
+                        <span class="w-12 h-12 rounded-lg border border-gray-200 bg-amber-50 flex items-center justify-center">
+                            <span class="w-7 h-5 rounded bg-green-700"></span>
+                        </span>
+                    </label>
+                    <label class="flex items-center gap-4 p-4 border border-gray-200 rounded-xl cursor-pointer hover:border-green-500">
+                        <input type="radio" name="theme" value="dark" class="accent-green-700">
+                        <span class="flex-1">
+                            <span class="block font-semibold">Dark theme</span>
+                            <span class="block text-sm text-gray-500">A darker look for low-light viewing.</span>
+                        </span>
+                        <span class="w-12 h-12 rounded-lg border border-gray-700 bg-gray-900 flex items-center justify-center">
+                            <span class="w-7 h-5 rounded bg-green-500"></span>
+                        </span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-xl p-5 shadow mb-6" aria-labelledby="retention-heading">
+                <div class="mb-5">
+                    <h2 id="retention-heading" class="text-lg font-bold">Data retention</h2>
+                    <p class="text-sm text-gray-500 mt-1">Choose how long imported transaction data stays in ETracker.</p>
+                </div>
+                <div class="max-w-xl">
+                    <label for="retention" class="block text-sm font-medium text-gray-700 mb-2">Keep my transaction data for</label>
+                    <select id="retention" name="retention" class="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-600">
+                        <option value="3-months">3 months</option>
+                        <option value="6-months">6 months</option>
+                        <option value="1-year">1 year</option>
+                        <option value="indefinitely" selected>Until I delete it</option>
+                    </select>
+                    <p class="text-sm text-gray-500 mt-2">When the selected period ends, older transaction data will be removed from your history.</p>
+                </div>
+            </section>
+
+            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+                <button type="button" class="bg-green-700 text-white font-semibold px-5 py-3 rounded-xl hover:bg-green-600 transition">
+                    Save changes
+                </button>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
