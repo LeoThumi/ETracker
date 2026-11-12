@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ETracker helps students understand their spending across mobile money and bank accounts.">
+    <title>ETracker | Make sense of your money</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-amber-50 text-gray-900">
+    <main>
+        <section class="relative flex min-h-screen flex-col bg-green-950 text-white">
+            <img src="assets/ledger.jpg" alt="background" class="absolute inset-0 h-full w-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-950/85 via-gray-950/60 to-green-950/35"></div>
+
+            <div class="relative z-10 flex flex-1 flex-col justify-center px-6 py-12 sm:px-10 lg:px-20">
+                <a href="home.html" class="mb-10 inline-flex w-fit items-center gap-3 text-lg font-bold">
+                    <span class="rounded-xl bg-white px-3 py-2 text-green-700">E</span>
+                    <span>ETracker</span>
+                </a>
+                <div class="max-w-3xl">
+                    <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">Your money flow made
+                        clearer</p>
+                    <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-7xl">Make sense of where your money
+                        goes.</h1>
+                    <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gray-100 sm:text-xl">
+                        Bring your M-Pesa and bank transactions together. ETracker turns your statements into simple
+                        summaries so you can be more accountable of your spendings.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <a href="Dashboard.html"
+                            class="rounded-xl bg-amber-400 px-6 py-3 font-bold text-gray-900 shadow-lg transition hover:bg-amber-300">Sign
+                            up</a>
+                        <a href="Dashboard.html"
+                            class="rounded-xl border border-white/80 bg-white/10 px-6 py-3 font-semibold text-white backdrop-blur transition hover:bg-white/20">Log
+                            in</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="landing-nav-slot">
+                <div id="landing-nav"
+                    class="sticky bottom-0 z-20 border-t border-white/20 bg-green-950/90 px-6 py-4 backdrop-blur-md transition-transform duration-300 sm:px-10 lg:px-20">
+                    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:flex-row">
+                        <a href="home.html" class="inline-flex shrink-0 items-center gap-2 text-lg font-bold">
+                            <span class="rounded-lg bg-white px-2 py-1 text-green-700">E</span>
+                            <span>ETracker</span>
+                        </a>
+                        <nav aria-label="Main navigation"
+                            class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-green-50 sm:justify-end">
+                            <a href="#about" class="transition hover:text-amber-300">About</a>
+                            <a href="#whyUs" class="transition hover:text-amber-300">Why us</a>
+                            <a href="#contact" class="transition hover:text-amber-300">Contact</a>
+                            <a href="Dashboard.html" class="transition hover:text-amber-300">Dashboard</a>
+                            <a href="analytics.html" class="transition hover:text-amber-300">Analytics</a>
+                            <a href="settings.html" class="transition hover:text-amber-300">Settings</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="bg-amber-50 px-6 py-16 sm:px-10 lg:px-20 lg:py-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="mb-10 max-w-3xl">
+                    <p class="text-sm font-bold uppercase tracking-widest text-green-700">About ETracker</p>
+                    <h2 class="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">A clearer picture of student spending.
+                    </h2>
+                    <p class="mt-4 text-lg leading-relaxed text-gray-600">
+                        ETracker is a student-focused expense tracker that brings transactions from mobile money and
+                        bank statements into one easy-to-understand view.
+                    </p>
+                </div>
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <article class="rounded-2xl border border-green-100 bg-white p-6 shadow-sm">
+                        <div
+                            class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-green-100 text-xl text-green-800">
+                            ◎</div>
+                        <h3 class="text-lg font-bold text-green-800">Why we built it</h3>
+                        <p class="mt-2 leading-relaxed text-gray-600">Statements list transactions, but rarely show the
+                            patterns behind them. ETracker helps make everyday spending and month-to-month changes
+                            easier to see.</p>
+                    </article>
+                    <article class="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm">
+                        <div
+                            class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-100 text-xl text-amber-800">
+                            ⌂</div>
+                        <h3 class="text-lg font-bold text-green-800">Who it's for</h3>
+                        <p class="mt-2 leading-relaxed text-gray-600">Built for students who juggle an allowance, side
+                            income, mobile money and bank accounts—and want a quick, straightforward way to understand
+                            their money.</p>
+                    </article>
+                    <article class="rounded-2xl border border-amber-100 bg-white p-6 shadow-sm">
+                        <div
+                            class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-100 text-xl text-amber-800">
+                            ▤</div>
+                        <h3 class="text-lg font-bold text-green-800">How the website helps</h3>
+                        <p class="mt-2 leading-relaxed text-gray-600">Import a statement to bring transactions together,
+                            review account activity, and use simple summaries and charts to spot where your money is
+                            going.</p>
+                    </article>
+                    <article class="rounded-2xl border border-green-100 bg-white p-6 shadow-sm">
+                        <div
+                            class="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-green-100 text-xl text-green-800">
+                            ✓</div>
+                        <h3 class="text-lg font-bold text-green-800">Your data, your choice</h3>
+                        <p class="mt-2 leading-relaxed text-gray-600">Imported transaction data is used to prepare your
+                            spending summaries. You can choose a data-retention period in Settings; this prototype does
+                            not connect to financial accounts.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="whyUs" class="bg-white px-6 py-16 sm:px-10 lg:px-20 lg:py-24">
+            <div class="mx-auto max-w-7xl">
+                <div class="mb-8 text-center">
+                    <p class="text-sm font-bold uppercase tracking-widest text-green-700">Student perspectives</p>
+                    <h2 class="mt-2 text-3xl font-bold text-gray-900 sm:text-4xl">Designed around real student needs.
+                    </h2>
+                    <p class="mt-3 text-sm text-gray-500">Why use ETracker?</p>
+                </div>
+                <div class="grid gap-4 md:grid-cols-3">
+                    <article
+                        class="min-h-36 rounded-2xl border border-gray-100 bg-amber-50 p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+                        <div class="mb-3 flex items-center gap-3">
+                            <span
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-green-700 font-bold text-white">A</span>
+                            <div>
+                                <h3 class="font-bold">A clearer monthly view</h3>
+                            </div>
+                        </div>
+                        <p class="text-sm leading-relaxed text-gray-700">“I want to understand the small daily spends before they add up at the end of the month.”</p>
+                    </article>
+                    <article
+                        class="min-h-36 rounded-2xl border border-gray-100 bg-amber-50 p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+                        <div class="mb-3 flex items-center gap-3">
+                            <span
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-amber-500 font-bold text-white">B</span>
+                            <div>
+                                <h3 class="font-bold">Less spreadsheet stress</h3>
+                            </div>
+                        </div>
+                        <p class="text-sm leading-relaxed text-gray-700">“A quick summary would help me see where my allowance goes without sorting through every transaction.”</p>
+                    </article>
+                    <article
+                        class="min-h-36 rounded-2xl border border-gray-100 bg-amber-50 p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg">
+                        <div class="mb-3 flex items-center gap-3">
+                            <span
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-green-700 font-bold text-white">M</span>
+                            <div>
+                                <h3 class="font-bold">One place for my accounts</h3>
+                            </div>
+                        </div>
+                        <p class="text-sm leading-relaxed text-gray-700">“I use mobile money and a bank account. Seeing them together would make it easier to plan.”</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-green-800 px-6 py-16 text-white sm:px-10 lg:px-20 lg:py-24">
+            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:gap-16">
+                <div>
+                    <p class="text-sm font-bold uppercase tracking-widest text-amber-300">Contact us</p>
+                    <h2 class="mt-2 text-3xl font-bold sm:text-4xl">We'd love to hear from you.</h2>
+                    <p class="mt-4 max-w-lg leading-relaxed text-green-100">Have a question or an idea that could make tracking student expenses easier? Send us a message.</p>
+                </div>
+                <form class="space-y-4">
+                    <div>
+                        <label for="contact-name" class="mb-1.5 block text-sm font-semibold">Name</label>
+                        <input id="contact-name" name="name" type="text" autocomplete="name" required
+                            class="w-full rounded-lg border border-white/30 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                            placeholder="Your name">
+                    </div>
+                    <div>
+                        <label for="contact-email" class="mb-1.5 block text-sm font-semibold">Email</label>
+                        <input id="contact-email" name="email" type="email" autocomplete="email" required
+                            class="w-full rounded-lg border border-white/30 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                            placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label for="contact-message" class="mb-1.5 block text-sm font-semibold">Message</label>
+                        <textarea id="contact-message" name="message" rows="4" required
+                            class="w-full resize-y rounded-lg border border-white/30 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-amber-300"
+                            placeholder="How can we help?"></textarea>
+                    </div>
+                    <button type="button" class="rounded-lg bg-amber-400 px-6 py-3 font-bold text-gray-900 transition hover:bg-amber-300">Send message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-950 px-6 py-8 text-white sm:px-10 lg:px-20">
+        <div class="mx-auto max-w-7xl text-center">
+            <p class="text-sm text-gray-400">&copy; 2026 ETracker. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
