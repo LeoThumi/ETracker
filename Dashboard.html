@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-amber-50 min-h-screen text-gray-900">
+    <header class="bg-green-700 text-white px-6 py-4 flex justify-between items-center shadow-md">
+        <div class="text-2xl font-bold">
+            <span class="bg-white text-green-700 rounded-xl px-2 py-1 mr-1">E</span>
+            ETracker
+        </div>
+        <span class="text-sm text-green-100">Monitor your money from entry to spending</span>
+    </header>
+    <div class="flex">
+        <aside class="w-60 min-h-screen bg-gray-100 font-semibold p-5">
+            <div class="flex justify-between items-center mb-8">
+                <div class="text-xl font-bold text-green-400">ETracker</div>
+                <button class="flex flex-col gap-1.5">
+                    <span class="w-6 h-0.5 bg-green-900"></span>
+                    <span class="w-6 h-0.5 bg-green-900"></span>
+                    <span class="w-6 h-0.5 bg-green-900"></span>
+                </button>
+            </div>
+            <ul class="space-y-3">
+                <li class="px-4 py-3 rounded-lg cursor-pointer bg-green-700">
+                    <a href="Dashboard.html">Dashboard</a>
+                </li>
+                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
+                    <a href="Accounts.html">Accounts</a>
+                </li>
+                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
+                    <a href="Imports.html">Imports</a>
+                </li>
+                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
+                    <a href="analytics.html">Analytics</a>
+                </li>
+                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
+                    <a href="settings.html">Settings</a>
+                </li>
+            </ul>
+        </aside>
+        <main class="flex-1 p-6">
+            <section class="grid md:grid-cols-3 gap-4 mb-6">
+                <div class="bg-white p-5 rounded-xl shadow">
+                    <p class="text-sm text-gray-500">Total Balance</p>
+                    <h2 class="text-3xl font-bold text-green-700">Ksh 100.00</h2>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow">
+                    <p class="text-sm text-gray-500">Monthly Spendings</p>
+                    <h2 class="text-3xl font-bold text-green-700">Ksh 100.00</h2>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow">
+                    <p class="text-sm text-gray-500">Monthly Comparison</p>
+                    <h2 class="text-3xl font-bold text-green-700">↑ 10%</h2>
+                </div>
+            </section>
+            <section class="grid md:grid-cols-2 gap-4 mb-6">
+                <div class="bg-white rounded-xl p-5 shadow border-green-600">
+                    <h3 class="font-semibold text-lg">Account 1</h3>
+                    <p class="text-gray-500 mt-2">Current Balance: Ksh 100.00</p>
+                </div>
+                <div class="bg-white rounded-xl p-5 shadow border-green-600">
+                    <h3 class="font-semibold text-lg">Account 1</h3>
+                    <p class="text-gray-500 mt-2">Current Balance: Ksh 100.00</p>
+                </div>
+            </section>
+            <section class="bg-white rounded-xl p-5 shadow">
+                <h2 class="text-lg font-bold mb-4">Recent Transactions</h2>
+
+                <div class="space-y-3">
+                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
+                        <span>Transaction 1</span>
+                        <span class="text-red-500">-Ksh 0.00</span>
+                    </div>
+                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
+                        <span>Transaction 2</span>
+                        <span class="text-red-500">+Ksh 0.00</span>
+                    </div>
+                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
+                        <span>Transaction 1</span>
+                        <span class="text-red-500">-Ksh 0.00</span>
+                    </div>
+                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
+                        <span>Transaction 2</span>
+                        <span class="text-red-500">+Ksh 0.00</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+
+</html>
