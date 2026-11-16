@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etracker</title>
+    <title>Dashboard | ETracker</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -14,86 +14,140 @@
             <span class="bg-white text-green-700 rounded-xl px-2 py-1 mr-1">E</span>
             ETracker
         </div>
-        <span class="text-sm text-green-100">Monitor your money from entry to spending</span>
+        <span class="text-sm text-green-100 hidden sm:inline">Monitor your money from entry to spending</span>
     </header>
     <div class="flex">
-        <aside class="w-60 min-h-screen bg-gray-100 font-semibold p-5">
+        <aside class="w-60 min-h-screen bg-gray-100 font-semibold p-5 shrink-0">
             <div class="flex justify-between items-center mb-8">
-                <div class="text-xl font-bold text-green-400">ETracker</div>
-                <button class="flex flex-col gap-1.5">
+                <div class="text-xl font-bold text-green-700">ETracker</div>
+                <button type="button" aria-label="Toggle navigation" class="flex flex-col gap-1.5">
                     <span class="w-6 h-0.5 bg-green-900"></span>
                     <span class="w-6 h-0.5 bg-green-900"></span>
                     <span class="w-6 h-0.5 bg-green-900"></span>
                 </button>
             </div>
             <ul class="space-y-3">
-                <li class="px-4 py-3 rounded-lg cursor-pointer bg-green-700">
-                    <a href="Dashboard.html">Dashboard</a>
-                </li>
-                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
-                    <a href="Accounts.html">Accounts</a>
-                </li>
-                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
-                    <a href="Imports.html">Imports</a>
-                </li>
-                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
-                    <a href="analytics.html">Analytics</a>
-                </li>
-                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
-                    <a href="settings.html">Settings</a>
-                </li>
+                <li class="px-4 py-3 rounded-lg bg-green-700 text-white"><a href="Dashboard.html" aria-current="page">Dashboard</a></li>
+                <li class="px-4 py-3 rounded-lg hover:bg-green-200 transition"><a href="Accounts.html">Accounts</a></li>
+                <li class="px-4 py-3 rounded-lg hover:bg-green-200 transition"><a href="Imports.html">Imports</a></li>
+                <li class="px-4 py-3 rounded-lg hover:bg-green-200 transition"><a href="analytics.html">Analytics</a></li>
+                <li class="px-4 py-3 rounded-lg hover:bg-green-200 transition"><a href="settings.html">Settings</a></li>
             </ul>
         </aside>
-        <main class="flex-1 p-6">
-            <section class="grid md:grid-cols-3 gap-4 mb-6">
-                <div class="bg-white p-5 rounded-xl shadow">
-                    <p class="text-sm text-gray-500">Total Balance</p>
-                    <h2 class="text-3xl font-bold text-green-700">Ksh 100.00</h2>
+
+        <main class="flex-1 min-w-0 p-6 space-y-6">
+            <div class="flex flex-wrap items-end justify-between gap-3">
+                <div>
+                    <h1 class="text-2xl font-bold text-green-700">Overview</h1>
+                    <p class="text-gray-600 mt-1">October 2026 · from your imported statements</p>
                 </div>
-                <div class="bg-white p-5 rounded-xl shadow">
-                    <p class="text-sm text-gray-500">Monthly Spendings</p>
-                    <h2 class="text-3xl font-bold text-green-700">Ksh 100.00</h2>
+                <a href="Imports.html" class="bg-green-700 text-white font-semibold px-5 py-3 rounded-xl hover:bg-green-600 transition">Import statement</a>
+            </div>
+
+            <section class="grid lg:grid-cols-3 gap-4">
+                <div class="lg:col-span-2 rounded-2xl bg-gradient-to-br from-green-800 to-green-950 text-white p-6 shadow-lg">
+                    <div class="flex flex-wrap justify-between items-start gap-3">
+                        <div>
+                            <p class="text-sm text-green-200">Total balance · 3 accounts</p>
+                            <h2 class="text-4xl sm:text-5xl font-bold tabular-nums mt-1">Ksh 29,570.00</h2>
+                        </div>
+                        <span class="rounded-full bg-white/15 px-3 py-1 text-sm font-semibold text-amber-300">↑ Ksh 5,220 this month</span>
+                    </div>
+                    <svg viewBox="0 0 300 70" preserveAspectRatio="none" class="w-full h-20 mt-4" role="img" aria-label="Total balance over October, ending higher than it started">
+                        <defs>
+                            <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#fcd34d" stop-opacity=".35"/>
+                                <stop offset="1" stop-color="#fcd34d" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M0,58 L30,52 L60,55 L90,34 L120,40 L150,30 L180,36 L210,22 L240,26 L270,14 L300,10 L300,70 L0,70 Z" fill="url(#fill)"/>
+                        <polyline points="0,58 30,52 60,55 90,34 120,40 150,30 180,36 210,22 240,26 270,14 300,10" fill="none" stroke="#fcd34d" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+                    </svg>
+                    <dl class="grid grid-cols-3 gap-4 mt-4 pt-4 border-t border-white/20 text-sm">
+                        <div><dt class="text-green-200">Income</dt><dd class="text-lg font-bold tabular-nums">+ 30,000</dd><dd class="text-xs text-green-200">↑ 8% vs Sep</dd></div>
+                        <div><dt class="text-green-200">Spent</dt><dd class="text-lg font-bold tabular-nums">− 24,780</dd><dd class="text-xs text-amber-300">↑ 4% vs Sep</dd></div>
+                        <div><dt class="text-green-200">Net</dt><dd class="text-lg font-bold tabular-nums">+ 5,220</dd><dd class="text-xs text-green-200">17% saved</dd></div>
+                    </dl>
                 </div>
-                <div class="bg-white p-5 rounded-xl shadow">
-                    <p class="text-sm text-gray-500">Monthly Comparison</p>
-                    <h2 class="text-3xl font-bold text-green-700">↑ 10%</h2>
+
+                <div class="rounded-2xl bg-white p-6 shadow flex flex-col">
+                    <p class="text-sm text-gray-500">Left to spend from income</p>
+                    <h2 class="text-3xl font-bold text-green-700 tabular-nums mt-1">Ksh 5,220</h2>
+                    <div class="mt-4 h-3 rounded-full bg-gray-100 overflow-hidden flex" title="83% of income spent">
+                        <div class="bg-green-700" style="width:35%"></div>
+                        <div class="bg-lime-600" style="width:25%"></div>
+                        <div class="bg-yellow-500" style="width:18%"></div>
+                        <div class="bg-orange-500" style="width:12%"></div>
+                        <div class="bg-slate-400" style="width:10%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-1">Ksh 24,780 of Ksh 30,000 spent · 83%</p>
+                    <ul class="mt-4 space-y-2 text-sm flex-1">
+                        <li class="flex justify-between"><span class="flex items-center gap-2"><i class="w-2.5 h-2.5 rounded-full bg-green-700"></i>Food</span><span class="font-semibold tabular-nums">8,673</span></li>
+                        <li class="flex justify-between"><span class="flex items-center gap-2"><i class="w-2.5 h-2.5 rounded-full bg-lime-600"></i>Transport</span><span class="font-semibold tabular-nums">6,195</span></li>
+                        <li class="flex justify-between"><span class="flex items-center gap-2"><i class="w-2.5 h-2.5 rounded-full bg-yellow-500"></i>Bills &amp; data</span><span class="font-semibold tabular-nums">4,460</span></li>
+                    </ul>
+                    <a href="analytics.html" class="mt-4 text-sm font-semibold text-green-700 hover:underline">See full breakdown</a>
                 </div>
             </section>
-            <section class="grid md:grid-cols-2 gap-4 mb-6">
-                <div class="bg-white rounded-xl p-5 shadow border-green-600">
-                    <h3 class="font-semibold text-lg">Account 1</h3>
-                    <p class="text-gray-500 mt-2">Current Balance: Ksh 100.00</p>
+            <section>
+                <div class="flex justify-between items-center mb-3">
+                    <h2 class="text-lg font-bold">Your accounts</h2>
+                    <a href="Accounts.html" class="text-sm font-semibold text-green-700 hover:underline">Manage accounts</a>
                 </div>
-                <div class="bg-white rounded-xl p-5 shadow border-green-600">
-                    <h3 class="font-semibold text-lg">Account 1</h3>
-                    <p class="text-gray-500 mt-2">Current Balance: Ksh 100.00</p>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="rounded-2xl bg-gradient-to-br from-green-600 to-green-800 text-white p-5 shadow-md">
+                        <div class="flex justify-between items-start"><span class="font-bold text-lg">M-Pesa</span><span class="w-9 h-6 rounded bg-amber-300/90" aria-hidden="true"></span></div>
+                        <p class="mt-6 text-sm text-green-100 tracking-widest">07•• ••• 421</p>
+                        <p class="text-2xl font-bold tabular-nums mt-1">Ksh 4,820.00</p>
+                        <p class="text-xs text-green-100 mt-2">Updated 31 Oct</p>
+                    </div>
+                    <div class="rounded-2xl bg-gradient-to-br from-red-700 to-rose-900 text-white p-5 shadow-md">
+                        <div class="flex justify-between items-start"><span class="font-bold text-lg">Absa Bank</span><span class="w-9 h-6 rounded bg-amber-300/90" aria-hidden="true"></span></div>
+                        <p class="mt-6 text-sm text-red-100 tracking-widest">•••• •••• 3076</p>
+                        <p class="text-2xl font-bold tabular-nums mt-1">Ksh 18,450.00</p>
+                        <p class="text-xs text-red-100 mt-2">Updated 31 Oct</p>
+                    </div>
+                    <div class="rounded-2xl bg-gradient-to-br from-teal-600 to-teal-900 text-white p-5 shadow-md">
+                        <div class="flex justify-between items-start"><span class="font-bold text-lg">Co-op Bank</span><span class="w-9 h-6 rounded bg-amber-300/90" aria-hidden="true"></span></div>
+                        <p class="mt-6 text-sm text-teal-100 tracking-widest">•••• •••• 5912</p>
+                        <p class="text-2xl font-bold tabular-nums mt-1">Ksh 6,300.00</p>
+                        <p class="text-xs text-teal-100 mt-2">Updated 28 Oct</p>
+                    </div>
                 </div>
+            </section>
+            <section class="rounded-xl bg-green-50 border border-green-200 px-5 py-4 flex flex-wrap items-center justify-between gap-3 text-sm">
+                <p><span class="font-semibold text-green-800">Last import:</span> M-Pesa statement · 31 Oct · 30 transactions, 10 duplicates skipped</p>
+                <a href="Imports.html" class="font-semibold text-red-600 hover:underline">4 problems to review</a>
             </section>
             <section class="bg-white rounded-xl p-5 shadow">
-                <h2 class="text-lg font-bold mb-4">Recent Transactions</h2>
-
-                <div class="space-y-3">
-                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
-                        <span>Transaction 1</span>
-                        <span class="text-red-500">-Ksh 0.00</span>
-                    </div>
-                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
-                        <span>Transaction 2</span>
-                        <span class="text-red-500">+Ksh 0.00</span>
-                    </div>
-                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
-                        <span>Transaction 1</span>
-                        <span class="text-red-500">-Ksh 0.00</span>
-                    </div>
-                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
-                        <span>Transaction 2</span>
-                        <span class="text-red-500">+Ksh 0.00</span>
-                    </div>
+                <div class="flex justify-between items-center mb-3">
+                    <h2 class="text-lg font-bold">Recent transactions</h2>
+                    <a href="Imports.html" class="text-sm font-semibold text-green-700 hover:underline">Add more</a>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="text-left text-gray-500 border-b">
+                                <th class="font-medium py-2 pr-3">Date</th>
+                                <th class="font-medium py-2 pr-3">Description</th>
+                                <th class="font-medium py-2 pr-3">Category</th>
+                                <th class="font-medium py-2 pr-3">Account</th>
+                                <th class="font-medium py-2 text-right">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y">
+                            <tr class="hover:bg-amber-50"><td class="py-3 pr-3 whitespace-nowrap">30 Oct</td><td class="pr-3">Naivas Supermarket</td><td class="pr-3"><span class="flex items-center gap-2"><i class="w-2 h-2 rounded-full bg-green-700"></i>Food</span></td><td class="pr-3 text-gray-600">M-Pesa</td><td class="text-right tabular-nums text-red-600">− 1,240.00</td></tr>
+                            <tr class="hover:bg-amber-50"><td class="py-3 pr-3 whitespace-nowrap">29 Oct</td><td class="pr-3">Bolt ride</td><td class="pr-3"><span class="flex items-center gap-2"><i class="w-2 h-2 rounded-full bg-lime-600"></i>Transport</span></td><td class="pr-3 text-gray-600">M-Pesa</td><td class="text-right tabular-nums text-red-600">− 380.00</td></tr>
+                            <tr class="hover:bg-amber-50"><td class="py-3 pr-3 whitespace-nowrap">28 Oct</td><td class="pr-3">Tutoring payment</td><td class="pr-3"><span class="flex items-center gap-2"><i class="w-2 h-2 rounded-full bg-green-500"></i>Income</span></td><td class="pr-3 text-gray-600">Co-op Bank</td><td class="text-right tabular-nums text-green-700">+ 3,500.00</td></tr>
+                            <tr class="hover:bg-amber-50"><td class="py-3 pr-3 whitespace-nowrap">27 Oct</td><td class="pr-3">Safaricom data bundle</td><td class="pr-3"><span class="flex items-center gap-2"><i class="w-2 h-2 rounded-full bg-yellow-500"></i>Bills &amp; data</span></td><td class="pr-3 text-gray-600">M-Pesa</td><td class="text-right tabular-nums text-red-600">− 500.00</td></tr>
+                            <tr class="hover:bg-amber-50"><td class="py-3 pr-3 whitespace-nowrap">25 Oct</td><td class="pr-3">Jumia order</td><td class="pr-3"><span class="flex items-center gap-2"><i class="w-2 h-2 rounded-full bg-orange-500"></i>Shopping</span></td><td class="pr-3 text-gray-600">Absa Bank</td><td class="text-right tabular-nums text-red-600">− 2,150.00</td></tr>
+                            <tr class="hover:bg-amber-50"><td class="py-3 pr-3 whitespace-nowrap">24 Oct</td><td class="pr-3">Absa to M-Pesa</td><td class="pr-3"><span class="flex items-center gap-2"><i class="w-2 h-2 rounded-full bg-slate-400"></i>Transfer</span></td><td class="pr-3 text-gray-600">Absa Bank</td><td class="text-right tabular-nums text-gray-700">3,000.00</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
         </main>
     </div>
-
 </body>
 
 </html>
