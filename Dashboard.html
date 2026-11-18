@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | ETracker</title>
+    <title>Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -51,36 +51,27 @@
                     <h1 class="text-2xl font-bold text-green-700">Overview</h1>
                     <p class="text-gray-600 mt-1">October 2026 · from your imported statements</p>
                 </div>
-                <a href="Imports.html"
-                    class="bg-green-700 text-white font-semibold px-5 py-3 rounded-xl hover:bg-green-600 transition">Import
-                    statement</a>
+                <a href="Imports.html" class="bg-green-700 text-white font-semibold px-5 py-3 rounded-xl hover:bg-green-600 transition">Import statement</a>
             </div>
 
             <section class="grid lg:grid-cols-3 gap-4">
-                <div
-                    class="lg:col-span-2 rounded-2xl bg-gradient-to-br from-green-800 to-green-950 text-white p-6 shadow-lg">
+                <div class="lg:col-span-2 rounded-2xl bg-gradient-to-br from-green-800 to-green-950 text-white p-6 shadow-lg">
                     <div class="flex flex-wrap justify-between items-start gap-3">
                         <div>
                             <p class="text-sm text-green-200">Total balance · 3 accounts</p>
                             <h2 class="text-4xl sm:text-5xl font-bold tabular-nums mt-1">Ksh 29,570.00</h2>
                         </div>
-                        <span class="rounded-full bg-white/15 px-3 py-1 text-sm font-semibold text-amber-300">↑ Ksh
-                            5,220 this month</span>
+                        <span class="rounded-full bg-white/15 px-3 py-1 text-sm font-semibold text-amber-300">↑ Ksh 5,220 this month</span>
                     </div>
-                    <svg viewBox="0 0 300 70" preserveAspectRatio="none" class="w-full h-20 mt-4" role="img"
-                        aria-label="Total balance over October, ending higher than it started">
+                    <svg viewBox="0 0 300 70" preserveAspectRatio="none" class="w-full h-20 mt-4" role="img" aria-label="Total balance over October">
                         <defs>
                             <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
                                 <stop offset="0" stop-color="#fcd34d" stop-opacity=".35" />
                                 <stop offset="1" stop-color="#fcd34d" stop-opacity="0" />
                             </linearGradient>
                         </defs>
-                        <path
-                            d="M0,58 L30,52 L60,55 L90,34 L120,40 L150,30 L180,36 L210,22 L240,26 L270,14 L300,10 L300,70 L0,70 Z"
-                            fill="url(#fill)" />
-                        <polyline points="0,58 30,52 60,55 90,34 120,40 150,30 180,36 210,22 240,26 270,14 300,10"
-                            fill="none" stroke="#fcd34d" stroke-width="2.5" stroke-linejoin="round"
-                            stroke-linecap="round" vector-effect="non-scaling-stroke" />
+                        <path d="M0,58 L30,52 L60,55 L90,34 L120,40 L150,30 L180,36 L210,22 L240,26 L270,14 L300,10 L300,70 L0,70 Z" fill="url(#fill)" />
+                        <polyline points="0,58 30,52 60,55 90,34 120,40 150,30 180,36 210,22 240,26 270,14 300,10" fill="none" stroke="#fcd34d" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke" />
                     </svg>
                     <dl class="grid grid-cols-3 gap-4 mt-4 pt-4 border-t border-white/20 text-sm">
                         <div>
@@ -134,15 +125,13 @@
                             <span class="font-semibold tabular-nums">4,460</span>
                         </li>
                     </ul>
-                    <a href="analytics.html" class="mt-4 text-sm font-semibold text-green-700 hover:underline">See full
-                        breakdown</a>
+                    <a href="analytics.html" class="mt-4 text-sm font-semibold text-green-700 hover:underline">See full breakdown</a>
                 </div>
             </section>
             <section>
                 <div class="flex justify-between items-center mb-3">
                     <h2 class="text-lg font-bold">Your accounts</h2>
-                    <a href="Accounts.html" class="text-sm font-semibold text-green-700 hover:underline">Manage
-                        accounts</a>
+                    <a href="Accounts.html" class="text-sm font-semibold text-green-700 hover:underline">Manage accounts</a>
                 </div>
                 <div class="grid md:grid-cols-3 gap-4">
                     <div class="rounded-2xl bg-gradient-to-br from-green-600 to-green-800 text-white p-5 shadow-md">
@@ -177,9 +166,7 @@
             <section
                 class="rounded-xl bg-green-50 border border-green-200 px-5 py-4 flex flex-wrap items-center justify-between gap-3 text-sm">
                 <p>
-                    <span class="font-semibold text-green-800">
-                        Last import:
-                    </span>
+                    <span class="font-semibold text-green-800">Last import: </span>
                     M-Pesa statement · 31 Oct · 30 transactions, 10 duplicates skipped
                 </p>
                 <a href="Imports.html" class="font-semibold text-red-600 hover:underline">4 problems to review</a>
@@ -227,7 +214,7 @@
                             </tr>
                             <tr class="hover:bg-amber-50">
                                 <td class="py-3 pr-3 whitespace-nowrap">28 Oct</td>
-                                <td class="pr-3">Tutoring payment</td>
+                                <td class="pr-3">Fees payment</td>
                                 <td class="pr-3">
                                     <span class="flex items-center gap-2">
                                         <i class="w-2 h-2 rounded-full bg-green-500"></i>Income

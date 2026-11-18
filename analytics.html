@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics | ETracker</title>
+    <title>Analytics</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -14,7 +14,7 @@
             <span class="bg-white text-green-700 rounded-xl px-2 py-1 mr-1">E</span>
             ETracker
         </div>
-        <span class="text-sm text-green-100">Monitor your money from entry to spending</span>
+        <span class="text-sm text-green-100 hidden sm:inline">Monitor your money from entry to spending</span>
     </header>
     <div class="flex">
         <aside class="w-60 min-h-screen bg-gray-100 font-semibold p-5 shrink-0">
@@ -27,221 +27,120 @@
                 </button>
             </div>
             <ul class="space-y-3">
-                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
-                    <a href="Dashboard.html">Dashboard</a>
-                </li>
-                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
-                    <a href="Accounts.html">Accounts</a>
-                </li>
-                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
-                    <a href="Imports.html">Imports</a>
-                </li>
-                <li class="px-4 py-3 rounded-lg cursor-pointer bg-green-700 text-white">
-                    <a href="analytics.html" aria-current="page">Analytics</a>
-                </li>
-                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
-                    <a href="settings.html">Settings</a>
-                </li>
+                <li class="px-4 py-3 rounded-lg hover:bg-green-200 transition"><a href="Dashboard.html">Dashboard</a></li>
+                <li class="px-4 py-3 rounded-lg hover:bg-green-200 transition"><a href="Accounts.html">Accounts</a></li>
+                <li class="px-4 py-3 rounded-lg hover:bg-green-200 transition"><a href="Imports.html">Imports</a></li>
+                <li class="px-4 py-3 rounded-lg bg-green-700 text-white"><a href="analytics.html" aria-current="page">Analytics</a></li>
+                <li class="px-4 py-3 rounded-lg hover:bg-green-200 transition"><a href="settings.html">Settings</a></li>
             </ul>
         </aside>
-        <main class="flex-1 min-w-0 p-6">
-            <div class="flex flex-col gap-4 mb-6 lg:flex-row lg:justify-between lg:items-end">
+        <main class="flex-1 min-w-0 p-6 space-y-6">
+            <div class="flex flex-wrap items-end justify-between gap-3">
                 <div>
-                    <h1 class="text-2xl font-bold text-green-700">Spending Analytics</h1>
+                    <h1 class="text-2xl font-bold text-green-700">Spending analytics</h1>
                     <p class="text-gray-600 mt-1">See how your money flows from entry to exit.</p>
                 </div>
+                <span class="rounded-full bg-white border border-green-200 px-4 py-2 text-sm font-semibold text-green-800 shadow-sm">October 2026</span>
             </div>
-
-            <section class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 mb-6">
-                <div class="bg-white p-5 rounded-xl shadow">
-                    <p class="text-sm text-gray-500">Income this month</p>
-                    <h2 class="text-2xl font-bold text-green-700 mt-1">Ksh 30,000</h2>
-                    <p class="text-sm text-green-700 mt-2">↑ 8% from September</p>
+            <section class="grid md:grid-cols-3 gap-4">
+                <div class="bg-white p-5 rounded-2xl shadow">
+                    <p class="text-sm text-gray-500">Income</p>
+                    <h2 class="text-3xl font-bold text-green-700 tabular-nums mt-1">Ksh 30,000</h2>
+                    <p class="text-sm text-green-700 mt-2 font-semibold">↑ 8% <span class="font-normal text-gray-500">vs September</span></p>
                 </div>
-                <div class="bg-white p-5 rounded-xl shadow">
-                    <p class="text-sm text-gray-500">Expenses this month</p>
-                    <h2 class="text-2xl font-bold text-gray-900 mt-1">Ksh 20,000</h2>
-                    <p class="text-sm text-red-600 mt-2">↑ 4% from September</p>
+                <div class="bg-white p-5 rounded-2xl shadow">
+                    <p class="text-sm text-gray-500">Expenses</p>
+                    <h2 class="text-3xl font-bold tabular-nums mt-1">Ksh 20,000</h2>
+                    <p class="text-sm text-red-600 mt-2 font-semibold">↑ 4% <span class="font-normal text-gray-500">vs September</span></p>
                 </div>
-                <div class="bg-white p-5 rounded-xl shadow sm:col-span-2 xl:col-span-1">
-                    <p class="text-sm text-gray-500">Left to spend</p>
-                    <h2 class="text-2xl font-bold text-green-700 mt-1">Ksh 10,000</h2>
-                    <p class="text-sm text-gray-500 mt-2">Income minus expenses</p>
+                <div class="rounded-2xl bg-gradient-to-br from-green-800 to-green-950 text-white p-5 shadow-lg">
+                    <p class="text-sm text-green-200">Left to spend</p>
+                    <h2 class="text-3xl font-bold tabular-nums mt-1">Ksh 5,220</h2>
+                    <div class="mt-3 h-2 rounded-full bg-white/20 overflow-hidden"><div class="h-full bg-amber-300" style="width:17%"></div></div>
+                    <p class="text-xs text-green-200 mt-1">17% of income saved</p>
                 </div>
             </section>
-
-            <section class="grid xl:grid-cols-2 gap-6 mb-6">
-                <article class="bg-white rounded-xl p-5 shadow">
-                    <div class="flex justify-between items-start gap-4 mb-4">
-                        <div>
-                            <h2 class="text-lg font-bold">Spending by category</h2>
-                            <p class="text-sm text-gray-500">October 2026 · Ksh 20,000 total</p>
-                        </div>
-                    </div>
+            <section class="grid xl:grid-cols-2 gap-6">
+                <article class="bg-white rounded-2xl p-5 shadow">
+                    <h2 class="text-lg font-bold">Spending by category</h2>
+                    <p class="text-sm text-gray-500 mb-4">October 2026 · Ksh 20,000 total</p>
                     <div class="flex flex-col sm:flex-row items-center gap-6">
-                        <div class="w-48 h-48 shrink-0" role="img"
-                            aria-label="Donut chart: Food 35%, Transport 25%, Bills 18%, Shopping 12%, Other 10%">
+                        <div class="relative w-44 h-44 shrink-0" role="img" aria-label="Donut chart: Food 35%, Transport 25%, Bills 18%, Shopping 12%, Other 10%">
                             <svg viewBox="0 0 120 120" class="w-full h-full -rotate-90">
                                 <circle cx="60" cy="60" r="44" fill="none" stroke="#e5e7eb" stroke-width="16"></circle>
-                                <circle cx="60" cy="60" r="44" fill="none" stroke="#15803d" stroke-width="16"
-                                    stroke-dasharray="96.8 179.7" stroke-dashoffset="0"></circle>
-                                <circle cx="60" cy="60" r="44" fill="none" stroke="#65a30d" stroke-width="16"
-                                    stroke-dasharray="69.1 207.4" stroke-dashoffset="-96.8"></circle>
-                                <circle cx="60" cy="60" r="44" fill="none" stroke="#eab308" stroke-width="16"
-                                    stroke-dasharray="49.8 226.7" stroke-dashoffset="-165.9"></circle>
-                                <circle cx="60" cy="60" r="44" fill="none" stroke="#f97316" stroke-width="16"
-                                    stroke-dasharray="33.2 243.3" stroke-dashoffset="-215.7"></circle>
-                                <circle cx="60" cy="60" r="44" fill="none" stroke="#94a3b8" stroke-width="16"
-                                    stroke-dasharray="27.7 248.8" stroke-dashoffset="-248.9"></circle>
+                                <circle cx="60" cy="60" r="44" fill="none" stroke="#15803d" stroke-width="16" stroke-dasharray="96.8 179.7" stroke-dashoffset="0"></circle>
+                                <circle cx="60" cy="60" r="44" fill="none" stroke="#65a30d" stroke-width="16" stroke-dasharray="69.1 207.4" stroke-dashoffset="-96.8"></circle>
+                                <circle cx="60" cy="60" r="44" fill="none" stroke="#eab308" stroke-width="16" stroke-dasharray="49.8 226.7" stroke-dashoffset="-165.9"></circle>
+                                <circle cx="60" cy="60" r="44" fill="none" stroke="#f97316" stroke-width="16" stroke-dasharray="33.2 243.3" stroke-dashoffset="-215.7"></circle>
+                                <circle cx="60" cy="60" r="44" fill="none" stroke="#94a3b8" stroke-width="16" stroke-dasharray="27.7 248.8" stroke-dashoffset="-248.9"></circle>
                             </svg>
-                            <div class="-mt-28 text-center">
+                            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
                                 <p class="text-xs text-gray-500">Total spend</p>
-                                <p class="text-sm font-bold">Ksh 20,000</p>
+                                <p class="text-sm font-bold tabular-nums">Ksh 20,000</p>
                             </div>
                         </div>
                         <ul class="w-full space-y-3 text-sm">
-                            <li class="flex justify-between items-center gap-3">
-                                <span class="flex items-center gap-2">
-                                    <span class="w-3 h-3 rounded-full bg-green-700"> </span>
-                                    Food
-                                </span>
-                                <span class="font-semibold">Ksh 8,673
-                                    <span class="text-gray-500 font-normal">(35%)</span>
-                                </span>
-                            </li>
-                            <li class="flex justify-between items-center gap-3">
-                                <span class="flex items-center gap-2">
-                                    <span class="w-3 h-3 rounded-full bg-lime-600"></span>
-                                    Transport</span>
-                                <span class="font-semibold">Ksh 6,195
-                                    <span class="text-gray-500 font-normal">(25%)</span>
-                                </span>
-                            </li>
-                            <li class="flex justify-between items-center gap-3">
-                                <span class="flex items-center gap-2">
-                                    <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
-                                    Bills &amp; data
-                                </span>
-                                <span class="font-semibold">Ksh 4,460
-                                    <span class="text-gray-500 font-normal">(18%)</span>
-                                </span>
-                            </li>
-                            <li class="flex justify-between items-center gap-3">
-                                <span class="flex items-center gap-2">
-                                    <span class="w-3 h-3 rounded-full bg-orange-500"></span>
-                                    Shopping
-                                </span>
-                                <span class="font-semibold">Ksh 2,974
-                                    <span class="text-gray-500 font-normal">(12%)</span>
-                                </span>
-                            </li>
-                            <li class="flex justify-between items-center gap-3">
-                                <span class="flex items-center gap-2">
-                                    <span class="w-3 h-3 rounded-full bg-slate-400"></span>
-                                    Other
-                                </span>
-                                <span class="font-semibold">Ksh 2,478
-                                    <span class="text-gray-500 font-normal">(10%)</span>
-                                </span>
-                            </li>
+                            <li class="flex justify-between gap-3"><span class="flex items-center gap-2"><i class="w-3 h-3 rounded-full bg-green-700"></i>Food</span><span class="font-semibold tabular-nums">Ksh 8,673 <span class="text-gray-500 font-normal">(35%)</span></span></li>
+                            <li class="flex justify-between gap-3"><span class="flex items-center gap-2"><i class="w-3 h-3 rounded-full bg-lime-600"></i>Transport</span><span class="font-semibold tabular-nums">Ksh 6,195 <span class="text-gray-500 font-normal">(25%)</span></span></li>
+                            <li class="flex justify-between gap-3"><span class="flex items-center gap-2"><i class="w-3 h-3 rounded-full bg-yellow-500"></i>Bills &amp; data</span><span class="font-semibold tabular-nums">Ksh 4,460 <span class="text-gray-500 font-normal">(18%)</span></span></li>
+                            <li class="flex justify-between gap-3"><span class="flex items-center gap-2"><i class="w-3 h-3 rounded-full bg-orange-500"></i>Shopping</span><span class="font-semibold tabular-nums">Ksh 2,974 <span class="text-gray-500 font-normal">(12%)</span></span></li>
+                            <li class="flex justify-between gap-3"><span class="flex items-center gap-2"><i class="w-3 h-3 rounded-full bg-slate-400"></i>Other</span><span class="font-semibold tabular-nums">Ksh 2,478 <span class="text-gray-500 font-normal">(10%)</span></span></li>
                         </ul>
                     </div>
                 </article>
-
-                <article class="bg-white rounded-xl p-5 shadow">
-                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 mb-4">
+                <article class="bg-white rounded-2xl p-5 shadow">
+                    <div class="flex flex-wrap justify-between items-start gap-3 mb-4">
                         <div>
                             <h2 class="text-lg font-bold">Income vs. expenses</h2>
                             <p class="text-sm text-gray-500">Monthly totals · Ksh</p>
                         </div>
                         <div class="flex gap-4 text-sm">
-                            <span class="flex items-center gap-2">
-                                <span class="w-3 h-3 rounded-sm bg-green-700"></span>
-                                Income
-                            </span>
-                            <span class="flex items-center gap-2">
-                                <span class="w-3 h-3 rounded-sm bg-amber-400"></span>
-                                Expenses
-                            </span>
+                            <span class="flex items-center gap-2"><i class="w-3 h-3 rounded-sm bg-green-700"></i>Income</span>
+                            <span class="flex items-center gap-2"><i class="w-3 h-3 rounded-sm bg-amber-400"></i>Expenses</span>
                         </div>
                     </div>
-                    <div class="w-full overflow-hidden" role="img"
-                        aria-label="Bar chart comparing monthly income and expenses from May to October 2026">
+                    <div role="img" aria-label="Bar chart of monthly income and expenses, May to October 2026. October: income 30,000, expenses 24,780.">
                         <svg viewBox="0 0 520 250" class="w-full h-auto" aria-hidden="true">
-                            <line x1="48" y1="25" x2="505" y2="25" stroke="#e5e7eb"></line>
-                            <line x1="48" y1="75" x2="505" y2="75" stroke="#e5e7eb"></line>
-                            <line x1="48" y1="125" x2="505" y2="125" stroke="#e5e7eb"></line>
-                            <line x1="48" y1="175" x2="505" y2="175" stroke="#e5e7eb"></line>
-                            <line x1="48" y1="215" x2="505" y2="215" stroke="#9ca3af"></line>
-                            <text x="4" y="29" fill="#6b7280" font-size="11">40k</text>
-                            <text x="4" y="79" fill="#6b7280" font-size="11">30k</text>
-                            <text x="4" y="129" fill="#6b7280" font-size="11">20k</text>
-                            <text x="4" y="179" fill="#6b7280" font-size="11">10k</text>
-                            <rect x="76" y="85" width="21" height="130" rx="3" fill="#15803d"></rect>
-                            <rect x="101" y="118" width="21" height="97" rx="3" fill="#fbbf24"></rect>
-                            <rect x="149" y="75" width="21" height="140" rx="3" fill="#15803d"></rect>
-                            <rect x="174" y="105" width="21" height="110" rx="3" fill="#fbbf24"></rect>
-                            <rect x="222" y="90" width="21" height="125" rx="3" fill="#15803d"></rect>
-                            <rect x="247" y="123" width="21" height="92" rx="3" fill="#fbbf24"></rect>
-                            <rect x="295" y="62" width="21" height="153" rx="3" fill="#15803d"></rect>
-                            <rect x="320" y="102" width="21" height="113" rx="3" fill="#fbbf24"></rect>
-                            <rect x="368" y="77" width="21" height="138" rx="3" fill="#15803d"></rect>
-                            <rect x="393" y="116" width="21" height="99" rx="3" fill="#fbbf24"></rect>
-                            <rect x="441" y="52" width="21" height="163" rx="3" fill="#15803d"></rect>
-                            <rect x="466" y="91" width="21" height="124" rx="3" fill="#fbbf24"></rect>
-                            <text x="80" y="235" fill="#6b7280" font-size="11">May</text>
-                            <text x="153" y="235" fill="#6b7280" font-size="11">Jun</text>
-                            <text x="226" y="235" fill="#6b7280" font-size="11">Jul</text>
-                            <text x="299" y="235" fill="#6b7280" font-size="11">Aug</text>
-                            <text x="372" y="235" fill="#6b7280" font-size="11">Sep</text>
-                            <text x="445" y="235" fill="#6b7280" font-size="11">Oct</text>
+                            <g stroke="#e5e7eb"><line x1="48" y1="15" x2="505" y2="15"/><line x1="48" y1="65" x2="505" y2="65"/><line x1="48" y1="115" x2="505" y2="115"/><line x1="48" y1="165" x2="505" y2="165"/></g>
+                            <line x1="48" y1="215" x2="505" y2="215" stroke="#9ca3af"/>
+                            <g fill="#6b7280" font-size="11"><text x="8" y="19">40k</text><text x="8" y="69">30k</text><text x="8" y="119">20k</text><text x="8" y="169">10k</text></g>
+                            <rect x="76" y="78" width="21" height="137" rx="3" fill="#15803d"/><rect x="101" y="113" width="21" height="102" rx="3" fill="#fbbf24"/>
+                            <rect x="149" y="67" width="21" height="148" rx="3" fill="#15803d"/><rect x="174" y="99" width="21" height="116" rx="3" fill="#fbbf24"/>
+                            <rect x="222" y="83" width="21" height="132" rx="3" fill="#15803d"/><rect x="247" y="118" width="21" height="97" rx="3" fill="#fbbf24"/>
+                            <rect x="295" y="54" width="21" height="161" rx="3" fill="#15803d"/><rect x="320" y="96" width="21" height="119" rx="3" fill="#fbbf24"/>
+                            <rect x="368" y="76" width="21" height="139" rx="3" fill="#15803d"/><rect x="393" y="96" width="21" height="119" rx="3" fill="#fbbf24"/>
+                            <rect x="441" y="65" width="21" height="150" rx="3" fill="#15803d"/><rect x="466" y="91" width="21" height="124" rx="3" fill="#fbbf24"/>
+                            <g fill="#6b7280" font-size="11"><text x="80" y="235">May</text><text x="153" y="235">Jun</text><text x="226" y="235">Jul</text><text x="299" y="235">Aug</text><text x="372" y="235">Sep</text><text x="445" y="235" font-weight="bold" fill="#111827">Oct</text></g>
                         </svg>
                     </div>
                 </article>
             </section>
-
-            <section class="bg-white rounded-xl p-5 shadow">
-                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-4">
-                    <div>
-                        <h2 class="text-lg font-bold">Spending breakdown</h2>
-                        <p class="text-sm text-gray-500">Your highest spending categories this month</p>
+            <section class="grid lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 bg-white rounded-2xl p-5 shadow">
+                    <h2 class="text-lg font-bold">Spending breakdown</h2>
+                    <p class="text-sm text-gray-500 mb-4">Every category, largest first</p>
+                    <div class="space-y-4 text-sm">
+                        <div><div class="flex justify-between mb-1"><span>Food</span><span class="font-semibold tabular-nums">Ksh 8,673</span></div><div class="h-2 rounded-full bg-gray-100"><div class="h-2 rounded-full bg-green-700" style="width:35%"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span>Transport</span><span class="font-semibold tabular-nums">Ksh 6,195</span></div><div class="h-2 rounded-full bg-gray-100"><div class="h-2 rounded-full bg-lime-600" style="width:25%"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span>Bills &amp; data</span><span class="font-semibold tabular-nums">Ksh 4,460</span></div><div class="h-2 rounded-full bg-gray-100"><div class="h-2 rounded-full bg-yellow-500" style="width:18%"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span>Shopping</span><span class="font-semibold tabular-nums">Ksh 2,974</span></div><div class="h-2 rounded-full bg-gray-100"><div class="h-2 rounded-full bg-orange-500" style="width:12%"></div></div></div>
+                        <div><div class="flex justify-between mb-1"><span>Other</span><span class="font-semibold tabular-nums">Ksh 2,478</span></div><div class="h-2 rounded-full bg-gray-100"><div class="h-2 rounded-full bg-slate-400" style="width:10%"></div></div></div>
                     </div>
-                    <span class="text-sm text-gray-500">October 2026</span>
                 </div>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Food</span>
-                            <span class="font-semibold">Ksh 8,673</span>
-                        </div>
-                        <div class="w-full h-2 rounded-full bg-gray-100">
-                            <div class="h-2 rounded-full bg-green-700" style="width: 35%">
-                            </div>
-                        </div>
+                <div class="bg-white rounded-2xl p-5 shadow space-y-4">
+                    <h2 class="text-lg font-bold">What stands out</h2>
+                    <div class="rounded-xl bg-green-50 border border-green-200 p-4 text-sm">
+                        <p class="font-semibold text-green-800">You saved more than in September</p>
+                        <p class="text-gray-600 mt-1">Income grew 8% while expenses grew 4%, lifting your savings to Ksh 5,220.</p>
                     </div>
-                    <div>
-                        <div class="flex justify-between text-sm mb-1"><span>Transport</span>
-                            <span class="font-semibold">Ksh 6,195</span>
-                        </div>
-                        <div class="w-full h-2 rounded-full bg-gray-100">
-                            <div class="h-2 rounded-full bg-lime-600" style="width: 25%">
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Bills &amp; data</span>
-                            <span class="font-semibold">Ksh 4,460</span>
-                        </div>
-                        <div class="w-full h-2 rounded-full bg-gray-100">
-                            <div class="h-2 rounded-full bg-yellow-500" style="width: 18%"></div>
-                        </div>
+                    <div class="rounded-xl bg-amber-50 border border-amber-200 p-4 text-sm">
+                        <p class="font-semibold text-amber-800">Food and transport are 60% of spending</p>
+                        <p class="text-gray-600 mt-1">Ksh 14,868 of your Ksh 24,780 went on these two categories.</p>
                     </div>
                 </div>
             </section>
         </main>
     </div>
-
 </body>
 
 </html>

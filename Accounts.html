@@ -4,128 +4,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETracker</title>
+    <title>Accounts</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details[open] .chev {
+            transform: rotate(180deg);
+        }
+    </style>
 </head>
 
-<body>
+<body class="min-h-screen bg-amber-50 text-gray-900">
     <header class="bg-green-700 text-white px-6 py-4 flex justify-between items-center shadow-md">
         <div class="text-2xl font-bold">
-            <span class="bg-white text-green-700 rounded-xl px-2 py-1 mr-1">E</span>
+            <span class="bg-white text-green-700 px-2 py-1 mr-1 rounded-xl">E</span>
             ETracker
         </div>
-        <span class="text-sm text-green-100">Monitor your money from entry to spending</span>
+        <span class="hidden text-sm text-green-100 sm:inline">Monitor your money from entry to spending</span>
     </header>
     <div class="flex">
-        <aside class="w-60 min-h-screen bg-gray-100 font-semibold p-5">
+        <aside class="min-h-screen bg-gray-100 p-5 w-60  font-semibold shrink-0">
             <div class="flex justify-between items-center mb-8">
-                <div class="text-xl font-bold text-green-700">ETracker</div>
-                <button class="flex flex-col gap-1.5">
+                <div class="text-xl text-green-700 font-bold">ETracker</div>
+                <button type="button" aria-label="Toggle navigation" class="flex flex-col gap-1.5">
                     <span class="w-6 h-0.5 bg-green-900"></span>
                     <span class="w-6 h-0.5 bg-green-900"></span>
                     <span class="w-6 h-0.5 bg-green-900"></span>
                 </button>
             </div>
             <ul class="space-y-3">
-                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
+                <li class="px-4 py-3 rounded-lg hover:bg-green-200 transition">
                     <a href="Dashboard.html">Dashboard</a>
                 </li>
-                <li class="px-4 py-3 rounded-lg cursor-pointer bg-green-700">
-                    Accounts
+                <li class="px-4 py-3 rounded-lg bg-green-700 text-white">
+                    <a href="Accounts.html" aria-current="page">Accounts</a>
                 </li>
-                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
+                <li class="px-4 py-3 rounded-lg hover:bg-green-200 transition">
                     <a href="Imports.html">Imports</a>
                 </li>
-                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
+                <li class="px-4 py-3 rounded-lg hover:bg-green-200 transition">
                     <a href="analytics.html">Analytics</a>
                 </li>
-                <li class="px-4 py-3 rounded-lg cursor-pointer hover:bg-green-200 transition">
+                <li class="px-4 py-3 rounded-lg hover:bg-green-200 transition">
                     <a href="settings.html">Settings</a>
                 </li>
             </ul>
         </aside>
-        <main class="flex-1 p-6 ">
-            <div class="mb-6">
-                <h2 class="text-2xl font-bold text-green-700">Manage Accounts</h2>
-                <p class="text-gray-600">Manage and add all your accounts in one place</p>
-            </div>
-            <button class="bg-green-700 text-white font-semibold px-5 py-3 rounded-xl mb-4 hover:bg-green-600 transition">+ Add Account </button>
-            <div class="bg-gray-100 rounded-lg p-3">
-                <h2 class="text-lg font-semibold mb-4">All your accounts in one place</h2>
-                <hr class="bg-black mb-2 h-0.4">
-                <section class="flex-1 gap-2 space-y-3">
-                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
-                        <div class="flex-1">
-                            <h3 class="font-semibold">Account 1</h3>
-                            <span>M-Pesa</span>
-                            <p>Current Balance: Ksh 100.00 </p>
-                            <span>Last updated: 10/10/10</span>
-                        </div>
-                        <div class="flex justify-between items-center gap-2">
-                            <span class="bg-green-300 font-semibold rounded-lg p-1 cursor-pointer hover:bg-green-400">Edit</span>
-                            <span class="bg-red-300 rounded-lg font-semibold p-1 cursor-pointer hover:bg-red-400">Archive</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
-                        <div class="flex-1">
-                            <h3 class="font-semibold">Account 2</h3>
-                            <span>Absa Bank</span>
-                            <p>Current Balance: Ksh 100.00 </p>
-                            <span>Last updated: 10/10/10</span>
-                        </div>
-                        <div class="flex justify-between items-center gap-2">
-                            <span class="bg-green-300 font-semibold rounded-lg p-1 cursor-pointer hover:bg-green-400"> Edit</span>
-                            <span class="bg-red-300 rounded-lg font-semibold p-1 cursor-pointer hover:bg-red-400"> Archive</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
-                        <div class="flex-1">
-                            <h3 class="font-semibold">Account 3</h3>
-                            <span>Co-op Bank</span>
-                            <p>Current Balance: Ksh 100.00 </p>
-                            <span>Last updated: 10/10/10</span>
-                        </div>
-                        <div class="flex justify-between items-center gap-2">
-                            <span class="bg-green-300 font-semibold rounded-lg p-1 cursor-pointer hover:bg-green-400"> Edit</span>
-                            <span class="bg-red-300 rounded-lg font-semibold p-1 cursor-pointer hover:bg-red-400"> Archive</span>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <section class="bg-gray-100 rounded-lg p-3 mt-3">
-                <div class="flex justify-between cursor-pointer">
-                    <h2 class="text-lg font-semibold mb-4">Inactivated accounts</h2>
-                    <spa class="font-semibold text-xl mr-2">⌄</span>
+
+        <main class="min-w-0 flex-1 p-6 space-y-6">
+            <div class="flex flex-wrap items-end justify-between gap-3">
+                <div>
+                    <h1 class="text-2xl font-bold text-green-700">Manage accounts</h1>
+                    <p class="text-gray-600 mt-1">Your mobile money and bank accounts in one place.</p>
                 </div>
-                <div class="relative p-2">
-                    <div class="absolute inset-0 bg-orange-400/30 rounded-lg z-10"></div>
-                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
-                        <div class="flex-1">
-                            <h3>Account 3</h3>
-                            <span>Co-op Bank</span>
-                            <p>Current Balance: Ksh 100.00 </p>
-                            <span>Last updated: 10/10/10</span>
-                        </div>
-                        <div class="flex justify-between items-center gap-2">
-                            <span class="bg-green-300 font-semibold rounded-lg p-1 cursor-pointer hover:bg-green-400">Restore</span>
-                        </div>
+                <button type="button"
+                    class="bg-green-700 text-white font-semibold px-5 py-3 rounded-xl hover:bg-green-600 transition">+
+                    Add account</button>
+            </div>
+            <section class="rounded-2xl bg-gradient-to-br from-green-800 to-green-950 text-white p-6 shadow-lg">
+                <div class="flex flex-wrap justify-between items-end gap-4">
+                    <div>
+                        <p class="text-sm text-green-200">Combined balance</p>
+                        <h2 class="text-4xl font-bold">Ksh 29,570.00</h2>
                     </div>
-                    <div class="flex justify-between p-3 bg-amber-50 rounded-lg">
-                        <div class="flex-1">
-                            <h3>Account 3</h3>
-                            <span>Co-op Bank</span>
-                            <p>Current Balance: Ksh 100.00 </p>
-                            <span>Last updated: 10/10/10</span>
+                    <dl class="flex gap-8 text-sm">
+                        <div>
+                            <dt class="text-green-200">Active</dt>
+                            <dd class="text-xl font-bold">3</dd>
                         </div>
-                        <div class="flex justify-between items-center gap-2">
-                            <span class="bg-green-300 font-semibold rounded-lg p-1 cursor-pointer hover:bg-green-400">Restore</span>
+                        <div>
+                            <dt class="text-green-200">Archived</dt>
+                            <dd class="text-xl font-bold">2</dd>
                         </div>
-                    </div>
+                        <div>
+                            <dt class="text-green-200">Last import</dt>
+                            <dd class="text-xl font-bold">31 Oct</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="mt-5 h-3 rounded-full bg-white overflow-hidden flex" role="img"
+                    aria-label="Categories of total balance">
+                    <div class="bg-red-400" style="width:62.4%"></div>
+                    <div class="bg-teal-300" style="width:21.3%"></div>
+                    <div class="bg-green-300" style="width:16.3%"></div>
+                </div>
+                <div class="flex flex-wrap gap-x-5 gap-y-1 mt-2 text-xs text-green-100">
+                    <span class="flex items-center gap-1.5">
+                        <i class="w-2.5 h-2.5 rounded-full bg-red-400"></i>
+                        Absa 62%
+                    </span>
+                    <span class="flex items-center gap-1.5">
+                        <i class="w-2.5 h-2.5 rounded-full bg-teal-300"></i>
+                        Co-op 21%
+                    </span>
+                    <span class="flex items-center gap-1.5">
+                        <i class="w-2.5 h-2.5 rounded-full bg-green-300"></i>
+                        M-Pesa 16%
+                    </span>
                 </div>
             </section>
+            <section class="space-y-4" aria-label="Active accounts">
+                <article class="bg-white shadow overflow-hidden flex flex-col rounded-2xl sm:flex-row">
+                    <div class="sm:w-2 h-2 sm:h-auto bg-green-600"></div>
+                    <div class="flex-1 p-5 grid gap-4 md:grid-cols-3 items-center">
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="w-12 h-12 rounded-full bg-green-100 text-green-800 font-bold text-lg flex items-center justify-center">M</span>
+                            <div>
+                                <h3 class="font-bold text-lg">M-Pesa</h3>
+                                <p class="text-sm text-gray-500">Mobile money · 07•• ••• 421</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Current balance</p>
+                            <p class="text-2xl font-bold tabular-nums">Ksh 4,820.00</p>
+                            <p class="text-xs text-gray-500 mt-1">In 11,000 · Out 14,350 this month</p>
+                        </div>
+                        <div class="flex flex-wrap md:justify-end items-center gap-2 text-sm">
+                            <span class="text-xs text-gray-500 w-full md:w-auto md:mr-2">Updated 31 Oct</span>
+                            <a href="Imports.html" class="rounded-lg border border-green-700 text-green-700 font-semibold px-3 py-1.5 hover:bg-green-50">Import</a>
+                            <button type="button" class="rounded-lg bg-green-200 font-semibold px-3 py-1.5 hover:bg-green-300">Edit</button>
+                            <button type="button" class="rounded-lg bg-red-100 text-red-800 font-semibold px-3 py-1.5 hover:bg-red-200">Archive</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl shadow overflow-hidden flex flex-col sm:flex-row">
+                    <div class="sm:w-2 h-2 sm:h-auto bg-red-600"></div>
+                    <div class="flex-1 p-5 grid gap-4 md:grid-cols-3 items-center">
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="w-12 h-12 rounded-full bg-red-100 text-red-800 font-bold text-lg flex items-center justify-center shrink-0">A</span>
+                            <div>
+                                <h3 class="font-bold text-lg">Absa Bank</h3>
+                                <p class="text-sm text-gray-500">Bank · •••• 3076</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Current balance</p>
+                            <p class="text-2xl font-bold tabular-nums">Ksh 18,450.00</p>
+                            <p class="text-xs text-gray-500 mt-1">In 20,000 · Out 7,150 this month</p>
+                        </div>
+                        <div class="flex flex-wrap md:justify-end items-center gap-2 text-sm">
+                            <span class="text-xs text-gray-500 w-full md:w-auto md:mr-2">Updated 31 Oct</span>
+                            <a href="Imports.html" class="rounded-lg border border-green-700 text-green-700 font-semibold px-3 py-1.5 hover:bg-green-50">Import</a>
+                            <button type="button" class="rounded-lg bg-green-200 font-semibold px-3 py-1.5 hover:bg-green-300">Edit</button>
+                            <button type="button" class="rounded-lg bg-red-100 text-red-800 font-semibold px-3 py-1.5 hover:bg-red-200">Archive</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-2xl shadow overflow-hidden flex flex-col sm:flex-row">
+                    <div class="sm:w-2 h-2 sm:h-auto bg-teal-600"></div>
+                    <div class="flex-1 p-5 grid gap-4 md:grid-cols-3 items-center">
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="w-12 h-12 rounded-full bg-teal-100 text-teal-800 font-bold text-lg flex items-center justify-center shrink-0">C</span>
+                            <div>
+                                <h3 class="font-bold text-lg">Co-op Bank</h3>
+                                <p class="text-sm text-gray-500">Bank · •••• 5912</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Current balance</p>
+                            <p class="text-2xl font-bold tabular-nums">Ksh 6,300.00</p>
+                            <p class="text-xs text-gray-500 mt-1">In 3,500 · Out 3,280 this month</p>
+                        </div>
+                        <div class="flex flex-wrap md:justify-end items-center gap-2 text-sm">
+                            <span class="text-xs text-gray-500 w-full md:w-auto md:mr-2">Updated 28 Oct</span>
+                            <a href="Imports.html" class="rounded-lg border border-green-700 text-green-700 font-semibold px-3 py-1.5 hover:bg-green-50">Import</a>
+                            <button type="button" class="rounded-lg bg-green-200 font-semibold px-3 py-1.5 hover:bg-green-300">Edit</button>
+                            <button type="button" class="rounded-lg bg-red-100 text-red-800 font-semibold px-3 py-1.5 hover:bg-red-200">Archive</button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <details class="bg-gray-100 rounded-2xl p-5">
+                <summary class="flex justify-between items-center cursor-pointer">
+                    <span>
+                        <span class="text-lg font-bold">Archived accounts</span>
+                        <span class="text-sm text-gray-500 ml-2">2 hidden from your totals</span>
+                    </span>
+                    <span class="chev text-xl font-semibold" aria-hidden="true">⌄</span>
+                </summary>
+                <div class="mt-4 space-y-3">
+                    <div
+                        class="flex flex-wrap justify-between items-center gap-3 bg-white/70 rounded-xl p-4 opacity-80">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-gray-200 text-gray-600 font-bold flex items-center justify-center">E</span>
+                            <div>
+                                <h3 class="font-semibold">Equity Bank</h3>
+                                <p class="text-xs text-gray-500">Archived 2 Sep · Ksh 0.00</p>
+                            </div>
+                        </div>
+                        <button type="button" class="rounded-lg bg-green-200 font-semibold text-sm px-3 py-1.5 hover:bg-green-300">Restore</button>
+                    </div>
+                    <div
+                        class="flex flex-wrap justify-between items-center gap-3 bg-white/70 rounded-xl p-4 opacity-80">
+                        <div class="flex items-center gap-3">
+                            <span class="w-10 h-10 rounded-full bg-gray-200 text-gray-600 font-bold flex items-center justify-center">M</span>
+                            <div>
+                                <h3 class="font-semibold">M-Pesa (old line)</h3>
+                                <p class="text-xs text-gray-500">Archived 14 Jul · Ksh 0.00</p>
+                            </div>
+                        </div>
+                        <button type="button" class="rounded-lg bg-green-200 font-semibold text-sm px-3 py-1.5 hover:bg-green-300">Restore</button>
+                    </div>
+                </div>
+            </details>
         </main>
     </div>
-
 </body>
 
 </html>
